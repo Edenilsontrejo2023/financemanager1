@@ -2,16 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-    builder: (context, child) {
-      return Directionality(textDirection: TextDirection.ltr, child: child!);
-    },
-    title: 'GNav',
-    theme: ThemeData(
-      primaryColor: Colors.grey[800],
-    ),
-    home: Example()));
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, // Aquí se desactiva el banner de depuración
+      builder: (context, child) {
+        return Directionality(textDirection: TextDirection.ltr, child: child!);
+      },
+      title: 'GNav',
+      theme: ThemeData(
+        primaryColor: Colors.grey[800],
+      ),
+      home: Example(),
+    );
+  }
+}
 
 class Example extends StatefulWidget {
   @override
